@@ -5,7 +5,12 @@
 ![](https://img.shields.io/github/watchers/ariadata/dockerhost-sh.svg)
 ![](https://img.shields.io/github/forks/ariadata/dockerhost-sh.svg)
 
-> After Installing , use `sudo reboot` to restart your system
+#### This script also installs these packages:
+* git
+* curl , wget , nano
+* software-properties-common , lsb-release , gnupg-agent , cron
+* p7zip , sqlite3
+* apt-transport-https , ca-certificates
 
 ---
 ### Debian 11 :
