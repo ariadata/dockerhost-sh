@@ -19,7 +19,9 @@ bash <(curl -sSL https://github.com/ariadata/dockerhost-sh/raw/main/dockerhost-b
  > ##### 1️⃣ Create `non-root` sudo-enabled user via `root` first. (if there is no non-root user) :
 ```sh
 # run these commands as root user :
+# make sure sudo is installed
 apt --yes install sudo
+
 adduser production
 usermod -aG sudo production
 ```
