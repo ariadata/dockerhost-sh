@@ -11,5 +11,5 @@
 ### Debian 11 :
 #### `dockerhost` + `docker-compose` (root)
 ```sh
-bash <(curl -sSL https://raw.githubusercontent.com/ariadata/dockerhost-sh/main/dockerhost-basic-debian-11-root.sh)
+bash <(curl -sSL https://github.com/ariadata/dockerhost-sh/raw/main/dockerhost-basic-debian-11-root.sh)
 ```
