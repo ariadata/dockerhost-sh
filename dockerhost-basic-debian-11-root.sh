@@ -29,7 +29,7 @@ apt --yes update && apt -q --yes upgrade && apt --yes autoremove
 
 clear
 
-echo -e $'\n=====================================\n\e[32mDockerHost + docker-compose successfully installed.\033[0m\n=====================================\n'
+echo -e $'\n=====================================\n\e[32mDockerHost successfully installed.\033[0m\n=====================================\n'
 ## reboot at the end
 read -e -p $'Do you want to \e[31mreboot now\033[0m ? : ' -i "y" if_reboot_at_end
 if [[ $if_reboot_at_end =~ ^([Yy])$ ]]
