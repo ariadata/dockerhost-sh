@@ -6,11 +6,8 @@
 ![](https://img.shields.io/github/forks/ariadata/dockerhost-sh.svg)
 
 #### This script also installs these packages:
-* git
-* curl , wget , nano
-* software-properties-common , lsb-release , gnupg-agent , cron
-* p7zip , sqlite3
-* apt-transport-https , ca-certificates
+* git , curl , wget , nano , p7zip , sqlite3
+* software-properties-common , lsb-release , gnupg-agent , apt-transport-https , ca-certificates , cron
 
 ---
 ### Debian 11 :
