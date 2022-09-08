@@ -1,4 +1,4 @@
-# Bash scripts for dockerhost
+# Bash scripts for dockerhost basic
 [![Build Status](https://files.ariadata.co/file/ariadata_logo.png)](https://ariadata.co)
 
 ![](https://img.shields.io/github/stars/ariadata/dockerhost-sh.svg)
