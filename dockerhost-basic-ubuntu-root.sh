@@ -29,6 +29,8 @@ docker_compose_latest_version="$(get_latest_github_release_number docker/compose
 curl -L "https://github.com/docker/compose/releases/download/$docker_compose_latest_version/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose
 chmod +x /usr/bin/docker-compose
 
+apt --yes remove snapd --purge
+rm -rf ~/snap /var/snap /var/lib/snapd
 apt --yes update && apt -q --yes upgrade && apt --yes autoremove
 
 clear

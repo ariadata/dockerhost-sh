@@ -8,6 +8,10 @@ function get_latest_github_release_number() {
 
 read -e -p $'Update && Upgrade System first [y/n]? : ' -i "y" if_update_first
 
+# Change System timezone
+read -e -p $'Set Default System Timezone : ' -i "Europe/Istanbul" system_default_timezone
+sudo timedatectl set-timezone $system_default_timezone
+
 if [[ $if_update_first =~ ^([Yy])$ ]]
 then
 	sudo apt --yes update && sudo apt -q --yes upgrade
