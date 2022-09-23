@@ -14,6 +14,11 @@ sudo timedatectl set-timezone $system_default_timezone
 
 if [[ $if_update_first =~ ^([Yy])$ ]]
 then
+	sudo hwclock --hctosys
+	sudo apt --yes install ntp
+	sudo systemctl enable --now ntp
+	sudo systemctl restart ntp
+	sudo dpkg-reconfigure tzdata
 	sudo apt --yes update && sudo apt -q --yes upgrade
 fi
 
