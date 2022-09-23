@@ -11,6 +11,14 @@
 
 ---
 ### ✅ Debian 11 :
+Run these commands for upgrade problem as `root` :
+```sh
+hwclock --hctosys
+apt --yes install ntp
+systemctl enable --now ntp
+systemctl restart ntp
+dpkg-reconfigure tzdata
+```
 #### 🔷`non-root` recommended :
  > ##### 1️⃣ Create `non-root` sudo-enabled user via `root` first. (if there is no non-root user) :
 ```sh
