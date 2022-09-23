@@ -11,11 +11,7 @@
 
 ---
 ### ✅ Debian 11 :
-#### 🔷`root` :
-```sh
-bash <(curl -sSL https://github.com/ariadata/dockerhost-sh/raw/main/dockerhost-basic-debian-11-root.sh)
-```
-#### 🔷`non-root` :
+#### 🔷`non-root` recommended :
  > ##### 1️⃣ Create `non-root` sudo-enabled user via `root` first. (if there is no non-root user) :
 ```sh
 # run these commands as root user :
@@ -27,15 +23,17 @@ usermod -aG sudo production
 ```
  > ##### 2️⃣ Install dockerhost via 'non-root' user :
 ```sh
+apt --yes install curl
 bash <(curl -sSL https://github.com/ariadata/dockerhost-sh/raw/main/dockerhost-basic-debian-11-non-root.sh)
+```
+#### 🔷`root` :
+```sh
+apt --yes install curl
+bash <(curl -sSL https://github.com/ariadata/dockerhost-sh/raw/main/dockerhost-basic-debian-11-root.sh)
 ```
 ---
 ### ✅ Ubuntu 20+ :
-#### 🔷`root` :
-```sh
-bash <(curl -sSL https://github.com/ariadata/dockerhost-sh/raw/main/dockerhost-basic-ubuntu-root.sh)
-```
-#### 🔷`non-root` :
+#### 🔷`non-root` recommended :
  > ##### 1️⃣ Create `non-root` sudo-enabled user via `root` first. (if there is no non-root user) :
 ```sh
 # run these commands as root user :
@@ -47,7 +45,13 @@ usermod -aG sudo production
 ```
  > ##### 2️⃣ Install dockerhost via 'non-root' user :
 ```sh
+apt --yes install curl
 bash <(curl -sSL https://github.com/ariadata/dockerhost-sh/raw/main/dockerhost-basic-ubuntu-non-root.sh)
+```
+#### 🔷`root` :
+```sh
+apt --yes install curl
+bash <(curl -sSL https://github.com/ariadata/dockerhost-sh/raw/main/dockerhost-basic-ubuntu-root.sh)
 ```
 ---
 
