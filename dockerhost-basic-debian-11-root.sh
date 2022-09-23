@@ -10,12 +10,6 @@ read -e -p $'Update && Upgrade System first [y/n]? : ' -i "y" if_update_first
 
 # Change System timezone
 read -e -p $'Set Default System Timezone : ' -i "Europe/Istanbul" system_default_timezone
-
-hwclock --hctosys
-apt --yes install ntp
-systemctl enable --now ntp
-systemctl restart ntp
-
 timedatectl set-timezone $system_default_timezone
 
 if [[ $if_update_first =~ ^([Yy])$ ]]
