@@ -21,8 +21,8 @@ sudo yum install -y wget curl git nano sqlite p7zip ca-certificates yum-utils
 
 sudo yum config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 sudo yum install -y docker-ce docker-ce-cli containerd.io
-sudo chmod 666 /run/docker.sock
 sudo systemctl enable --now docker
+sudo chmod 666 /run/docker.sock
 
 docker_compose_latest_version="$(get_latest_github_release_number docker/compose)"
 curl -L "https://github.com/docker/compose/releases/download/$docker_compose_latest_version/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose
