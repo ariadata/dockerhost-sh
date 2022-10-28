@@ -4,7 +4,8 @@ set -e
 clear
 
 function get_latest_github_release_number() {
-	curl --silent "https://api.github.com/repos/$1/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'
+	# curl --silent "https://api.github.com/repos/$1/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'
+	curl --silent "https://api.github.com/repos/$1/releases/latest" | jq -r '.name'
 }
 
 # Change System timezone
@@ -17,7 +18,7 @@ yum makecache --refresh
 
 yum update -y
 
-yum install -y wget curl git nano sqlite p7zip ca-certificates yum-utils
+yum install -y wget curl git nano sqlite p7zip ca-certificates jq yum-utils
 
 yum config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 yum install -y docker-ce docker-ce-cli containerd.io

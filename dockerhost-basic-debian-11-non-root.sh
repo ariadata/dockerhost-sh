@@ -3,7 +3,8 @@ set -e
 clear
 
 function get_latest_github_release_number() {
-	curl --silent "https://api.github.com/repos/$1/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'
+	# curl --silent "https://api.github.com/repos/$1/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'
+	curl --silent "https://api.github.com/repos/$1/releases/latest" | jq -r '.name'
 }
 
 read -e -p $'Update && Upgrade System first [y/n]? : ' -i "y" if_update_first
@@ -17,7 +18,7 @@ then
 	sudo apt --yes update && sudo apt -q --yes upgrade
 fi
 
-sudo apt --yes install wget curl git nano lsb-release sqlite3 p7zip gnupg-agent apt-transport-https ca-certificates software-properties-common cron
+sudo apt --yes install wget curl git nano lsb-release sqlite3 p7zip gnupg-agent apt-transport-https ca-certificates software-properties-common jq cron
 sudo systemctl enable --now cron
 
 
