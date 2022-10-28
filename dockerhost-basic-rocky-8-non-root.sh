@@ -25,7 +25,7 @@ sudo systemctl enable --now docker
 sudo chmod 666 /run/docker.sock
 
 docker_compose_latest_version="$(get_latest_github_release_number docker/compose)"
-curl -L "https://github.com/docker/compose/releases/download/$docker_compose_latest_version/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/$docker_compose_latest_version/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose
 sudo chmod +x /usr/bin/docker-compose
 
 sudo yum update -y && sudo yum autoremove -y
