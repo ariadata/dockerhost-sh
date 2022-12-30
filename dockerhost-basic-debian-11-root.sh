@@ -26,9 +26,10 @@ bash <(curl -sSL -fsSL https://get.docker.com)
 systemctl enable --now docker
 chmod 666 /var/run/docker.sock
 
-docker_compose_latest_version="$(get_latest_github_release_number docker/compose)"
-curl -L "https://github.com/docker/compose/releases/download/$docker_compose_latest_version/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose
-chmod +x /usr/bin/docker-compose
+curl -fL https://raw.githubusercontent.com/docker/compose-switch/master/install_on_linux.sh | sh
+# docker_compose_latest_version="$(get_latest_github_release_number docker/compose)"
+# curl -L "https://github.com/docker/compose/releases/download/$docker_compose_latest_version/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose
+# chmod +x /usr/bin/docker-compose
 
 apt --yes update && apt -q --yes upgrade && apt --yes autoremove
 
