@@ -27,7 +27,7 @@ sudo usermod -aG docker $USER
 sudo systemctl enable --now docker
 sudo chmod 666 /var/run/docker.sock
 
-curl -fL https://raw.githubusercontent.com/docker/compose-switch/master/install_on_linux.sh | sh
+curl -fL https://raw.githubusercontent.com/docker/compose-switch/master/install_on_linux.sh | sudo bash
 # docker_compose_latest_version="$(get_latest_github_release_number docker/compose)"
 # sudo curl -L "https://github.com/docker/compose/releases/download/$docker_compose_latest_version/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose
 # sudo chmod +x /usr/bin/docker-compose
