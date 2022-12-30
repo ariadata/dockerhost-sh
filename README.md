@@ -8,6 +8,29 @@
 #### This script also installs these packages:
 * git , curl , wget , nano , p7zip , sqlite3
 
+### ✅ Rocky Linux 9 :
+#### 🔷`non-root` recommended :
+ > ##### 1️⃣ Create `non-root` sudo-enabled user via `root` first. (if there is no non-root user) :
+```sh
+# run these commands as root user :
+# make sure sudo is installed
+yum install -y sudo
+
+adduser production
+passwd production
+usermod -aG wheel production
+```
+ > ##### 2️⃣ Install dockerhost via 'non-root' user :
+```sh
+sudo yum install -y curl
+bash <(curl -sSL https://github.com/ariadata/dockerhost-sh/raw/main/dockerhost-basic-rocky-9-non-root.sh)
+```
+#### 🔷`root` :
+```sh
+yum install -y curl
+bash <(curl -sSL https://github.com/ariadata/dockerhost-sh/raw/main/dockerhost-basic-rocky-9-root.sh)
+```
+---
 ### ✅ Rocky Linux 8 :
 #### 🔷`non-root` recommended :
  > ##### 1️⃣ Create `non-root` sudo-enabled user via `root` first. (if there is no non-root user) :
