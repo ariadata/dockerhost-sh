@@ -21,13 +21,15 @@ sudo yum update -y
 sudo yum install -y wget curl git nano sqlite p7zip ca-certificates jq yum-utils
 
 sudo yum config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-sudo yum install -y docker-ce docker-ce-cli containerd.io
+sudo yum install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 sudo systemctl enable --now docker
 sudo chmod 666 /run/docker.sock
 
-docker_compose_latest_version="$(get_latest_github_release_number docker/compose)"
-sudo curl -L "https://github.com/docker/compose/releases/download/$docker_compose_latest_version/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose
-sudo chmod +x /usr/bin/docker-compose
+# compose-switch
+sudo curl -fL https://raw.githubusercontent.com/docker/compose-switch/master/install_on_linux.sh | sh
+#docker_compose_latest_version="$(get_latest_github_release_number docker/compose)"
+#sudo curl -L "https://github.com/docker/compose/releases/download/$docker_compose_latest_version/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose
+#sudo chmod +x /usr/bin/docker-compose
 
 sudo yum update -y && sudo yum autoremove -y
 
