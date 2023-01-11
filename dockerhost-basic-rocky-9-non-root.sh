@@ -22,6 +22,7 @@ sudo yum install -y wget curl git nano sqlite p7zip ca-certificates jq yum-utils
 
 sudo yum config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 sudo yum install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
+sudo usermod -aG docker $USER
 sudo systemctl enable --now docker
 sudo chmod 666 /run/docker.sock
 
