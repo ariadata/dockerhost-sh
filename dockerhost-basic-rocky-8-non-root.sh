@@ -41,6 +41,6 @@ echo -e $'\n=====================================\n\e[32mDockerHost successfully
 read -e -p $'Do you want to \e[31mreboot now\033[0m ? : ' -i "y" if_reboot_at_end
 if [[ $if_reboot_at_end =~ ^([Yy])$ ]]
 then
-	reboot
+	sudo reboot
 	exit
 fi
