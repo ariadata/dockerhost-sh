@@ -18,8 +18,9 @@ then
 	apt --yes update && apt -q --yes upgrade
 fi
 
-apt --yes install wget curl git nano lsb-release sqlite3 p7zip gnupg-agent apt-transport-https ca-certificates software-properties-common jq cron
+apt --yes install wget curl git nano lsb-release sqlite3 p7zip gnupg-agent apt-transport-https ca-certificates software-properties-common jq systemd-timesyncd cron
 systemctl enable --now cron
+systemctl enable --now systemd-timesyncd
 
 
 bash <(curl -sSL -fsSL https://get.docker.com)
