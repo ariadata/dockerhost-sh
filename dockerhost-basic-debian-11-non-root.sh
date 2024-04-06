@@ -33,7 +33,7 @@ curl -fL https://raw.githubusercontent.com/docker/compose-switch/master/install_
 # sudo curl -L "https://github.com/docker/compose/releases/download/$docker_compose_latest_version/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose
 # sudo chmod +x /usr/bin/docker-compose
 
-echo "dc='docker compose'" >> ~/.bashrc
+echo "alias dc='docker compose'" >> ~/.bashrc
 
 sudo apt --yes update && sudo apt -q --yes upgrade && sudo apt --yes autoremove
 
