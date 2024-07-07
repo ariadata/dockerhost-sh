@@ -18,7 +18,7 @@ then
 	sudo apt --yes update && sudo apt -q --yes upgrade
 fi
 
-sudo apt --yes install wget curl git nano lsb-release sqlite3 p7zip gnupg-agent apt-transport-https ca-certificates software-properties-common jq systemd-timesyncd cron
+sudo apt --yes install wget curl git nano lsb-release sqlite3 p7zip gnupg-agent apt-transport-https ca-certificates software-properties-common jq systemd-timesyncd cron htop zstd
 sudo systemctl enable --now cron
 sudo systemctl enable --now systemd-timesyncd
 

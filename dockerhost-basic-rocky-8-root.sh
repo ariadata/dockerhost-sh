@@ -18,7 +18,7 @@ yum makecache --refresh
 
 yum update -y
 
-yum install -y wget curl git nano sqlite p7zip ca-certificates jq yum-utils
+yum install -y wget curl git nano sqlite p7zip ca-certificates jq yum-utils htop zstd
 
 yum config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 yum install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
