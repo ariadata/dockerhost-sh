@@ -1,5 +1,5 @@
 # Bash scripts for install docker (+compose) on linux
-[![Build Status](https://raw.githubusercontent.com/ariadata/public-files/main/assets/ariadata-logo-300x120.png)](https://ariadata.co)
+[![Build Status](https://raw.githubusercontent.com/ariadata/ariadata-files/main/public-assets/images/ariadata_logo.png)](https://ariadata.co)
 
 ![](https://img.shields.io/github/stars/ariadata/dockerhost-sh.svg)
 ![](https://img.shields.io/github/watchers/ariadata/dockerhost-sh.svg)
